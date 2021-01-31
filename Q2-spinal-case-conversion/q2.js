@@ -1,5 +1,5 @@
 function spinalCase(str) {
-
+console.log(str.split(/\s|_|(?=[A-Z])/))
     return str.split(/\s|_|(?=[A-Z])/).join('-').toLowerCase()
   }
   
