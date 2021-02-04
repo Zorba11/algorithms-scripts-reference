@@ -4,7 +4,6 @@ function uniteUnique(arr) {
     // console.log('arr', arguments);
 
     let unionArr = [];
-    let counter = 0;
 
    for(let group of arguments) {
     group.forEach(item => {
