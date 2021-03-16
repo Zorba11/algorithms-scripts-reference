@@ -1,17 +1,32 @@
 function steamrollArray(arr) {
-  let a = '1';
-    console.log(parseInt(a))
 
-    //array to string and then get back a flattened array
-    let strArr = arr.toString().split(',');
+  //solution - 1
+  //initialize an empty array - final
+  // iterate through each element of the outer array
+  // check if it is an array or not empty, if true push the element to final
+  // else go to the next depth and repeat the last step
+  
+  let final = [];
 
-    // convert each item to a number 
+  for(let i = 0; i <= arr.length - 1; i++) {
+    console.log(arr[1][0])
+    console.log(Array.isArray(arr[i]))
 
-    let final = strArr.map((item) => parseInt(item));
+    let j = 0;
 
-    console.log(final)
-    
-    return final
+    if(!Array.isArray(arr[i]) && arr[i]) {
+      final.push(arr[i]);
+    } else if(!Array.isArray(arr[i][j]) && arr[i][j]){
+      final.push(arr[i][j])
+    } else if(!Array.isArray(arr[i][j][j]) && arr[i][j][j]) {
+      final.push(a[i][j][j])
+    }
+      
+      
+
+  }
+
+  console.log('final', final)
 
     
   }
